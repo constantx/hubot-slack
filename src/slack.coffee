@@ -31,7 +31,7 @@ class Slack extends Adapter
         channel    : channel
         text       : str
         link_names : @options.link_names if @options?.link_names?
-
+      console.log "Sending message with ", args
       @post "/services/hooks/hubot", args
 
   reply: (envelope, strings...) ->
